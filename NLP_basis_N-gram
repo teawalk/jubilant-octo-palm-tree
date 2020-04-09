@@ -1,3 +1,5 @@
+课程笔记：https://www.bilibili.com/video/BV13t411e7vB?p=8
+
 #双向最大匹配法
 启发式规则：
 1.如果正反向分词结果词数不同，则取分词数量较少的那个
@@ -20,3 +22,15 @@ P=(W1,W2,...Wn)=P(W1)P(W2丨W1)P(W3丨W1,W2)...P(Wn丨W1,W2,....Wn-1)
 因为计算量太大，衍生出马尔科夫。假设上面的n不取很长，只取2个，假设Wi出现的概率只与它前面的Wi-1有关（1阶的马尔科夫假设）
 则P(W1,W2,...Wn)≈P(W1)P(W2丨W1)
        
+当样本量很大时，基于大数定律，一个短语或者词语出现的概率可以用其频率来表示：
+P(Wi,Wi-1)≈count(Wi,Wi-1)/count(*)  count(i)表示词语i出现的词数，count表示语料库的大小
+
+P(Wi丨Wi-1)=P(Wi,Wi-1)/P(Wi-1)≈Count(Wi,Wi-1)/count(Wi-1)
+
+FBB&BMM-机械规则选择最优路径
+N-gram-统计方法
+
+argmax函数：
+argmax(f(x))是使得 f(x)取得最大值所对应的变量点x(或x的集合)。arg即argument，此处意为“自变量”。
+p.s.  y = max f(t) 代表：y 是f(t)函式所有的值中最大的output。
+      y = argmax f(t) 代表：y 是f(t)函式中，会产生最大output的那个参数t。
